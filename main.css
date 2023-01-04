@@ -1,0 +1,137 @@
+p{
+ color:tan;
+    font-size:22px;
+}
+
+ .listitem{
+    color:blue;
+    font-size:20px;
+}
+
+.paragraph{
+    color:tan;
+    font-size: 30px;
+}
+
+.marquee{
+    font-size: 20px;
+}
+
+#background {
+    background-color:red;
+}
+
+#button {
+width:100px;
+height:30px;
+color:white;
+background-color:black;
+border-radius:15px;
+}
+
+#banner {
+height:30px;
+width:99%;
+border:5px solid black;
+background-color:#996633;
+margin-bottom: 0px;
+}
+
+#footer {
+    height:30px;
+    width:99%;
+    border:2px solid black;
+    background-color:#996633;
+}
+
+.wrap-list {
+width: 20%;
+border-radius: 10px;
+border: 5px dashed black;
+}
+
+.wrap-trivia {
+height: 350px;
+width: 615px;
+border: 5px double black;
+padding: 5px;
+}
+
+.wrap-text {
+    border: 5px solid black;
+}
+
+#one {
+height: 150px;
+width: 150px;
+background-color: yellow;
+display: inline-block;
+position: absolute;
+z-index: 2;
+}
+
+#two {
+height: 150px;
+width: 150px;
+background-color: blue;
+display: inline-block;
+position: relative;
+top: 750px;
+left: 700;
+z-index: 1;
+}
+
+#three {
+height: 150px;
+width: 150px;
+background-color: red;
+display: inline-block;
+position: fixed;
+left: 25%;
+}
+
+#background-h {
+    height: 2048;
+}
+
+.navitem {
+list-style-type:none;
+display:inline;
+margin-right:.3em;
+padding: 2px 5px
+}
+
+#navmenu {
+ text-align:center;
+ background-color:black;
+ color:white;
+}
+
+a:link{
+    color:blue;
+}
+
+a:visited{
+    color:blue;
+}
+
+a:hover{
+    color:tan;
+}
+
+a:active{
+    color:green;
+}
+
+.rightside {
+ float:right;
+    width:60%%;
+}
+
+.leftside {
+    width:48%;
+}
+
+.cleafloat {
+    clear:both;
+}
