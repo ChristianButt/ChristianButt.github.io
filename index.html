@@ -1,88 +1,218 @@
 <html>
-  <head>
-      <link type="text/css" rel="stylesheet" href="main.css"/>
-    <title>Christian's Martial Arts Site Thingy</title>
-      <script>
-          function banner(){
-              var text= confirm ("Teleporting to Element Quiz for my chemistry class in Canvas lol");
-              return text;
-          }
-    
-        function answer(){
-var radio = document.getElementsByName("trivia");
-var selection = false;
-var message = "";
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="stylesheet.css">
+<title> A title </title>
+<script>
 
-for( var i = 0; i < radio.length; i++) {
-if(radio[i].value == "yes" && radio[i].checked == true) {
-selection = true;
-} //end if statement
+var array = [];
+
+function validate(){
+//VARIABLES
+var name = document.querySelector("#name");
+var title = document.querySelector("#title");
+var textarea = document.querySelector("#textarea");
+var textColor = document.querySelector("#textColor");
+var bgColor = document.querySelector("#bgColor");
+var radiobtns = document.querySelector("#radiobtns");
+var icons = document.querySelectorAll("[name='icon']");
+var message = document.querySelector("#message");
+
+var radio_choice = false;
+var blank_field = true;
+
+if(name.value == ""){
+name.style.border = "2px solid red";
+blank_field = true;
+} else {
+name.style.border = "2px solid green";
+blank_field = false;
+}
+
+if(title.value == ""){
+title.style.border = "2px solid red";
+blank_field = true;
+} else {
+title.style.border = "2px solid green";
+blank_field = false;
+}
+
+if(textarea.value == ""){
+textarea.style.border = "2px solid red";
+blank_field = true;
+} else {
+textarea.style.border = "2px solid green";
+blank_field = false;
+}
+
+if(textColor.value == "SELECT"){
+textColor.style.border = "2px solid red";
+blank_field = true;
+} else {
+textColor.style.border = "2px solid green";
+blank_field = false;
+}
+
+
+if(bgColor.value == "Choose a Background Color"){
+bgColor.style.border = "2px solid red";
+blank_field = true;
+} else {
+bgColor.style.border = "2px solid green";
+blank_field = false;
+}
+
+for(var i=0; i < icons.length; i++){
+if(icons[i].checked == true){
+radio_choice = true;
+radiobtns.style.border = "2px solid green";
+break;
+} else {
+radio_choice = false;
+radiobtns.style.border = "2px solid red";
+}
+
 } //end for loop
 
-if(selection == true) {
-message = message + "<b><p style='color:black'>Correct</p></b>";
+if(blank_field == false && radio_choice == true){
+  message.innerHTML = "";
+  save();
 } else {
-message = message + "<b><p style='color:black'>Try again</p></b>";
+  message.innerHTML = "<h3 style='color:red'> YOU MISSING SOMETHING!</h3>";
 }
-document.getElementById("response").innerHTML = message;
 
-} //end function answer
+} //end function validate
 
-      </script>
-    <style>
-    </style>
-  </head>
-    <body id="background">
-        <a onclick="return banner()" href="https://grovecitychristian.instructure.com/courses/1182/quizzes/3423">
-   <header id="banner"> <marquee class="marquee">Salutations, students!.............................................................................................................................Hard day of work is a good day..............................................................................................................................Punching is way weaker than kicking.......................................................................................................................Always try to counter, it may save your life, or win your match................................................................................................................................Taekwondo is better than boxing, beat it!...............................................................................................................................Boxing overrated ngl...............................................................................................................................What else am I supposed to put here?.....................................................................................................................................Salutations, students!.............................................................................................................................Hard day of work is a good day..............................................................................................................................Punching is way weaker than kicking.......................................................................................................................Always try to counter, it may save your life, or win your match................................................................................................................................Taekwondo is better than boxing, beat it!...............................................................................................................................Boxing overrated ngl...............................................................................................................................What else am I supposed to put here?.....................................................................................................................................Salutations, students!.............................................................................................................................Hard day of work is a good day..............................................................................................................................Punching is way weaker than kicking.......................................................................................................................Always try to counter, it may save your life, or win your match................................................................................................................................Taekwondo is better than boxing, beat it!...............................................................................................................................Boxing overrated ngl...............................................................................................................................What else am I supposed to put here?.....................................................................................................................................Salutations, students!.............................................................................................................................Hard day of work is a good day..............................................................................................................................Punching is way weaker than kicking.......................................................................................................................Always try to counter, it may save your life, or win your match................................................................................................................................Taekwondo is better than boxing, beat it!...............................................................................................................................Boxing overrated ngl...............................................................................................................................What else am I supposed to put here?.....................................................................................................................................Salutations, students!.............................................................................................................................Hard day of work is a good day..............................................................................................................................Punching is way weaker than kicking.......................................................................................................................Always try to counter, it may save your life, or win your match................................................................................................................................Taekwondo is better than boxing, beat it!...............................................................................................................................Boxing overrated ngl...............................................................................................................................What else am I supposed to put here?.....................................................................................................................................Salutations, students!.............................................................................................................................Hard day of work is a good day..............................................................................................................................Punching is way weaker than kicking.......................................................................................................................Always try to counter, it may save your life, or win your match................................................................................................................................Taekwondo is better than boxing, beat it!...............................................................................................................................Boxing overrated ngl...............................................................................................................................What else am I supposed to put here?.....................................................................................................................................Salutations, students!.............................................................................................................................Hard day of work is a good day..............................................................................................................................Punching is way weaker than kicking.......................................................................................................................Always try to counter, it may save your life, or win your match................................................................................................................................Taekwondo is better than boxing, beat it!...............................................................................................................................Boxing overrated ngl...............................................................................................................................What else am I supposed to put here?.....................................................................................................................................Salutations, students!.............................................................................................................................Hard day of work is a good day..............................................................................................................................Punching is way weaker than kicking.......................................................................................................................Always try to counter, it may save your life, or win your match................................................................................................................................Taekwondo is better than boxing, beat it!...............................................................................................................................Boxing overrated ngl...............................................................................................................................What else am I supposed to put here?.....................................................................................................................................Salutations, students!.............................................................................................................................Hard day of work is a good day..............................................................................................................................Punching is way weaker than kicking.......................................................................................................................Always try to counter, it may save your life, or win your match................................................................................................................................Taekwondo is better than boxing, beat it!...............................................................................................................................Boxing overrated ngl...............................................................................................................................What else am I supposed to put here?.....................................................................................................................................Salutations, students!.............................................................................................................................Hard day of work is a good day..............................................................................................................................Punching is way weaker than kicking.......................................................................................................................Always try to counter, it may save your life, or win your match................................................................................................................................Taekwondo is better than boxing, beat it!...............................................................................................................................Boxing overrated ngl...............................................................................................................................What else am I supposed to put here?.....................................................................................................................................Salutations, students!.............................................................................................................................Hard day of work is a good day..............................................................................................................................Punching is way weaker than kicking.......................................................................................................................Always try to counter, it may save your life, or win your match................................................................................................................................Taekwondo is better than boxing, beat it!...............................................................................................................................Boxing overrated ngl...............................................................................................................................What else am I supposed to put here?.....................................................................................................................................Salutations, students!.............................................................................................................................Hard day of work is a good day..............................................................................................................................Punching is way weaker than kicking.......................................................................................................................Always try to counter, it may save your life, or win your match................................................................................................................................Taekwondo is better than boxing, beat it!...............................................................................................................................Boxing overrated ngl...............................................................................................................................What else am I supposed to put here?.....................................................................................................................................Salutations, students!.............................................................................................................................Hard day of work is a good day..............................................................................................................................Punching is way weaker than kicking.......................................................................................................................Always try to counter, it may save your life, or win your match................................................................................................................................Taekwondo is better than boxing, beat it!...............................................................................................................................Boxing overrated ngl...............................................................................................................................What else am I supposed to put here?.....................................................................................................................................Salutations, students!.............................................................................................................................Hard day of work is a good day..............................................................................................................................Punching is way weaker than kicking.......................................................................................................................Always try to counter, it may save your life, or win your match................................................................................................................................Taekwondo is better than boxing, beat it!...............................................................................................................................Boxing overrated ngl...............................................................................................................................What else am I supposed to put here?.....................................................................................................................................Salutations, students!.............................................................................................................................Hard day of work is a good day..............................................................................................................................Punching is way weaker than kicking.......................................................................................................................Always try to counter, it may save your life, or win your match................................................................................................................................Taekwondo is better than boxing, beat it!...............................................................................................................................Boxing overrated ngl...............................................................................................................................What else am I supposed to put here?.....................................................................................................................................Salutations, students!.............................................................................................................................Hard day of work is a good day..............................................................................................................................Punching is way weaker than kicking.......................................................................................................................Always try to counter, it may save your life, or win your match................................................................................................................................Taekwondo is better than boxing, beat it!...............................................................................................................................Boxing overrated ngl...............................................................................................................................What else am I supposed to put here?.....................................................................................................................................Salutations, students!.............................................................................................................................Hard day of work is a good day..............................................................................................................................Punching is way weaker than kicking.......................................................................................................................Always try to counter, it may save your life, or win your match................................................................................................................................Taekwondo is better than boxing, beat it!...............................................................................................................................Boxing overrated ngl...............................................................................................................................What else am I supposed to put here?.....................................................................................................................................Salutations, students!.............................................................................................................................Hard day of work is a good day..............................................................................................................................Punching is way weaker than kicking.......................................................................................................................Always try to counter, it may save your life, or win your match................................................................................................................................Taekwondo is better than boxing, beat it!...............................................................................................................................Boxing overrated ngl...............................................................................................................................What else am I supposed to put here?.....................................................................................................................................Salutations, students!.............................................................................................................................Hard day of work is a good day..............................................................................................................................Punching is way weaker than kicking.......................................................................................................................Always try to counter, it may save your life, or win your match................................................................................................................................Taekwondo is better than boxing, beat it!...............................................................................................................................Boxing overrated ngl...............................................................................................................................What else am I supposed to put here?.....................................................................................................................................Salutations, students!.............................................................................................................................Hard day of work is a good day..............................................................................................................................Punching is way weaker than kicking.......................................................................................................................Always try to counter, it may save your life, or win your match................................................................................................................................Taekwondo is better than boxing, beat it!...............................................................................................................................Boxing overrated ngl...............................................................................................................................What else am I supposed to put here?.....................................................................................................................................Salutations, students!.............................................................................................................................Hard day of work is a good day..............................................................................................................................Punching is way weaker than kicking.......................................................................................................................Always try to counter, it may save your life, or win your match................................................................................................................................Taekwondo is better than boxing, beat it!...............................................................................................................................Boxing overrated ngl...............................................................................................................................What else am I supposed to put here?.....................................................................................................................................Salutations, students!.............................................................................................................................Hard day of work is a good day..............................................................................................................................Punching is way weaker than kicking.......................................................................................................................Always try to counter, it may save your life, or win your match................................................................................................................................Taekwondo is better than boxing, beat it!...............................................................................................................................Boxing overrated ngl...............................................................................................................................What else am I supposed to put here?.....................................................................................................................................Salutations, students!.............................................................................................................................Hard day of work is a good day..............................................................................................................................Punching is way weaker than kicking.......................................................................................................................Always try to counter, it may save your life, or win your match................................................................................................................................Taekwondo is better than boxing, beat it!...............................................................................................................................Boxing overrated ngl...............................................................................................................................What else am I supposed to put here?.....................................................................................................................................Salutations, students!.............................................................................................................................Hard day of work is a good day..............................................................................................................................Punching is way weaker than kicking.......................................................................................................................Always try to counter, it may save your life, or win your match................................................................................................................................Taekwondo is better than boxing, beat it!...............................................................................................................................Boxing overrated ngl...............................................................................................................................What else am I supposed to put here?.....................................................................................................................................Salutations, students!.............................................................................................................................Hard day of work is a good day..............................................................................................................................Punching is way weaker than kicking.......................................................................................................................Always try to counter, it may save your life, or win your match................................................................................................................................Taekwondo is better than boxing, beat it!...............................................................................................................................Boxing overrated ngl...............................................................................................................................What else am I supposed to put here?............................................................................................................................... </marquee></header>
-        </a>
-        <nav>
-        <ul id="navmenu">
-            <li> <a href="index.html"> Home </a></li>
-            <li> <a href="games.html"> Games </a></li>
-            <li> <a href="videos.html"> Videos </a></li>
-        </ul>
-            <h1>Welcome, Students</h1>
-         </nav>
-        <div class="rightside">
-            <p> add something here later </p>
-        </div>
-        <div class="leftside">
-            <p> add something here later </p>
-        </div>
-        <div class="clearfloat"> </div>
-    <p class="paragraph">OK so uhhh this is some site where I may put <strong>martial art</strong>  stuff and yea. <i>Very</i> boring, yet <u>full of info</u> (as of now it is empty).</p>
-        <div class="wrap-list">
-        <ol>
-            <li class="listitem"> I like kicking things </li>
-            <li class="listitem"> Taekwondo best art no cap </li>
-            <li class="listitem"> Capoeira also sweet </li>
-    </ol>
+function save(){
+
+var name = document.querySelector("#name");
+var title = document.querySelector("#title");
+var textarea = document.querySelector("#textarea");
+var icon = document.querySelectorAll("[name='icon']");
+var icon_value;
+var textColor = document.querySelector("#textColor");
+var bgColor = document.querySelector("#bgColor");
+
+for(var i=0; i < icon.length; i++){
+  if(icon[i].checked == true){
+    icon_value = icon[i].value;
+  }
+}
+
+var storage = {name: name.value, title: title.value, textarea: textarea.value, icon: icon.value,textColor: textColor.value, bgColor: bgColor.value};
+array.push(storage);
+
+display();
+  
+} //end function save
+
+function display(){
+var show = document.querySelector("#show");
+var post = "";
+for(var i=0; i < array.length; i++){
+post += "<div id='usercomment' style='background-color:"+array[i].bgColor+"; "+"color:"+array[i].textColor+";'>";
+post += "<input type='checkbox' onclick='gone("+i+");'/>";
+post += "<img src='"+array[i].icon+"' class='icon' />";
+post += "<strong> "+array[i].name+ "</strong><br>";
+post += "<strong> "+array[i].title+ "</strong><br>";
+post += array[i].textarea;
+post += "</div>";
+
+}
+show.innerHTML = post;
+} //end function display
+
+function gone(index){
+  array.splice(index,1);
+  display();
+}
+</script>
+</head>
+<body>
+  <div class="container">
+    
+    <div class="row">
+      <div class="col-sm-4" id="logo">
+      <img id="logo" class="img-responsive" src="wallpaper.jpg" />
     </div>
-<div class="wrap-trivia">
-    <h2>Answer this question to see if you have good martial art brain</h2>
-    <p class="paragraph">What style is also called <span class="wrap-text">Art of the Eight Limbs"?</span></p>
-    <form>
-        <div id="response"> </div>
-    <input type="radio" name="trivia" value="no"> Lethwei <br>
-    <input type="radio" name="trivia" value="no"> Capoeira <br>
-    <input type="radio" name="trivia" value="yes"> Muay Thai <br>
-    <input type="radio" name="trivia" value="no"> Taekkyeon <br>
-        <input onclick="answer()" type="button" value="Click Here" id="button">
-        </form>
-        </div>
-    <img width="20%" src="https://thumbs.dreamstime.com/z/silhouette-martial-arts-art-vector-design-76224889.jpg" />
-    <img width="20%" src="https://thumbs.dreamstime.com/z/asian-man-fighter-practices-martial-arts-mountains-high-sunset-kung-fu-karate-pose-also-concepts-discipline-45908155.jpg" />
-        <video width="400" height="220" controls autoplay>
-            <source src="https://youfiles.herokuapp.com/videodictionary/?m=Video_Player_Drive&state=%7B%22ids%22:%5B%221BQVNN-UyIFQABWFb9Y5nTx-3RkELmf71%22%5D,%22action%22:%22open%22,%22resourceKeys%22:%7B%7D%7D" type="video/mp4">
-            <audio width="400" height="220" controls autoplay>
-<source src="ENTER AUDIO LINK">
-Your browser does not support HTML 5 audio.
-</audio>
-            Video no work
-        </video>
-  <hr />
-    <center> Christian <a href=https://simplycodingcourses.com/dashboard/chbutt/courses>Me Favorite Website</a> </center>
-        <footer id="footer"> I, Giorno Giovana, created this website (JK, its me Christian Butt)</footer>
+    </div> <!-- end logo row -->
+    
+    <div class="row">
+<div class="col-sm-12" id="menu">
+<nav class="navbar navbar-expand bg-info navbar-light">
+<ul class="navbar-nav">
+<li class="nav-item">
+<a class="nav-link" href="#">Home</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="#">My Code Projects</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="#">About Me</a>
+</li>
+</ul>
+</nav>
+</div>
+</div> <!-- end menu row -->
+    
+    <div class="row">
+      
+      
+    </div> <!-- end comment row -->
+    <div class="col-sm-12" id="comments">
+    COMMENTS
+    <div class="col-sm-12 col-md-5" id="form">
+      <header id="header"> Leave a Comment</header>
+      <div id ="message"> </div>
+<form class="form-inline">
+
+<label>Name:</label>
+<input type="text" class="form-control" id="name" placeholder="Enter Name">
+
+<label>Color: </label>
+<select id="textColor" class="form-control">
+  <option>SELECT</option>
+  <option>Black</option>
+  <option>Blue</option>
+  <option>Green</option>
+  <option>Silver</option>
+  <option>Gold</option>
+</select>
+</form>
+<form>
+
+  <label>TITLE:</label>
+  <input type="text" class="form-control" id="title" placeholder="Comment Title">
+
+  <label>Background Color:</label>
+  <select id="bgColor" class="form-control">
+    <option>Choose a Background Color</option>
+    <option>PINK</option>
+    <option>RED</option>
+    <option>BLUE</option>
+    <option>BLACK</option>
+    <option>WHITE</option>
+  </select>
+  </form>
+<form class="form-inline" id="radiobtns">
+
+  <label> ICONS: </label>
+  <input type="radio" name="icon" value="phroggy.png">
+  <img src="phroggy.png" class="icon"/>
+  <input type="radio" name="icon" value="IMG_1082.JPG">
+  <img src="IMG_1082.JPG" class="icon"/>
+  <input type="radio" name="icon" value="Studio_Project.jpeg">
+  <img src="Studio_Project.jpeg" class="icon"/>
+  <input type="radio" name="icon" value="explosion.jpeg">
+  <img src="explosion.jpeg" class="icon"/>
+</form>
+
+<label>COMMENT:</label> <br>
+<textarea id="textarea" class="form-control" rows="8"></textarea> <br>
+<input onclick="validate()" class="btn btn-primary" type="button" value="Submit">
+    </div> <!--end form id div-->
+    <div id="show"> </div>
+    </div> <!--end comment id div-->
+  </div> <!-- end container div -->
 </body>
 </html>

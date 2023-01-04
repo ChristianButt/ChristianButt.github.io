@@ -1,0 +1,121 @@
+<html>
+<head>
+<title> JavaScript Practice </title>
+<script>
+
+var games = ["monopoly", "Apex Legends", "cards"];
+
+  function start(){
+    var age = 16;
+    var name = "Mista 'four'";
+    alert(name + " is " + age);
+  } //end start function
+  
+  function math(){
+    var calc = 5 + 4 - 3 * 2 / 1;
+    alert(calc);
+  } //end function math
+  
+  function question(){
+    var question = prompt("Where do I live?");
+    if (question == "Ohio"){
+      alert("super scary stalker");
+    } else {
+      alert("Ok so you are not my stalker, cool");
+    }
+  } //end function question
+  
+  function rate(){
+    var q = prompt("How much do you like JavaScript 1-10?");
+    
+    if(q < 4){
+      alert("Don't give up, brotha");
+    } else if(q < 7){
+      alert("It gets better from here!");
+    } else {
+      alert("Its gonna get even better and better and better and things are gonna be dope");
+    }
+  } //end function rate
+  
+  function change(){
+    var edit = document.querySelector("#find");
+    edit.innerHTML = "Magic buttons to click make things pop up";
+  } //end function change
+  var pass = 1;
+  function toggle(){
+    var twitch = document.querySelector("#rotate");
+    if (pass == 1){
+      twitch.innerHTML = "boutta change to pic";
+      pass = 2;
+      return;
+    } else if (pass == 2) {
+    twitch.innerHTML = "<img src='IMG_1082.JPG' />"
+    pass = 3
+    return;
+    } else {
+      twitch.innerHTML = "poof";
+      pass = 1;
+      return;
+    }
+  } //end function toggle
+  
+  function joke(){
+    var q = prompt("What color was George Washington's white horse?");
+    while(q != "white"){
+      q = prompt("What color was George Washinton's white horse?");
+    }
+    alert("Yee yee you rightee");
+  } //end function joke
+  
+  function oddCounts(){
+    for(var i = 1; 1 < 10; i+=2){
+      alert(i);
+    }
+  } //end function oddCounts
+  
+var sentence = "railroad crossing look out for the cars can you spell that without any r's";
+var array = [];
+for (var i = 0; i < sentence.length; i++){
+if(sentence[i] == "r") {
+array.push(sentence[i]);
+}
+}
+
+var shirt = {color:"blue and black", price: "$19.92", size: "L", shipping: "2 days"};
+function obj(){
+  var ask = prompt("Which of the following do you wanna know about my shirt? (color, price, size or shipping):");
+  alert("This shirt's " + ask + " is " + shirt[ask]);
+} //end function obj
+</script>
+</head>
+<body>
+  <div>
+ There are <script>document.write(array.length);</script> r's in the sentence: "<script>document.write(sentence); </script>
+    
+  </div>
+ 
+ <p>A game I like is <script> document.write(games[2]); </script> </p>
+ 
+  <div id="rotate">This is prob gonna change to a pic</div>
+ 
+  <div id="find"> My JavaScript Practice Page </div>
+
+<input type="button" onclick="start()" value="button man">
+
+<input type="button" onclick="math()" value="Calculate">
+
+<input type="button" onclick="question()" value="Question">
+
+<input type="button" onclick="rate()" value="Rate JS">
+
+<input type="button" onclick="change()" value="Magic Button click dis thing">
+
+<input type="button" onclick="toggle()" value="toggle button">
+
+<input type="button" onclick="joke()" value="Joker">
+
+<input type="button" onclick="oddCounts()" value= "For Loops (not fruit loops)">
+
+<input type="button" onclick="obj()" value="Click for shirt info">
+</body>
+</html>
